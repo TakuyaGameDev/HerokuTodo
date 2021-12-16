@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,4 +33,5 @@ Route::group(['middleware' => 'auth'], function() {
         Route::post('/folders/{folder}/tasks/{task}/edit', 'TodoController@edit');
     });
 });
+
 Auth::routes();
